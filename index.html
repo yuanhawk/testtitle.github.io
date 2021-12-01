@@ -1,76 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Anythink 5.0 Challenge</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Anythink 5.0 Challenge</h1>
-<p>Welcome to Anythink 5.0 Challenge. We are grateful that you are attempting our challenge. <br>
-Note: For any help that you need, you can pm either one of us below via telegram. <br></p>
-<p>Note: Each of us are tagged to an operating system <br></p>
-<p>MacOS/Linux: <br>
-<a href="https://t.me/Yuanhawk">Li Yuan</a>
-<a href="https://t.me/caramel_melmel">Melody</a></p>
-<p>Windows: <br>
-<a href="https://t.me/houjuunueheianalien">Leon</a>
-<a href="https://t.me/sean_gunawan">Sean Gunawan</a></p>
-<h2>Prerequisites</h2>
-<p>To complete this lab, you would need to do the following on your system to be able to complete the challenge.</p>
-<ol>
-<li>generate a pair of rsa private and public keys 2048 bits will be the correct size.</li>
-<li>You would also need python3 minimum python 3.8 to solve our challenge.</li>
-<li>For windows users, please ensure that Putty is working (recommended to ssh easily).
-Note: Ports 22, 3389 are open, make use of them wisely.</li>
-</ol>
-<h2>Key generation</h2>
-<p><em><strong>For POSIX compliant systems</strong></em>, you can use a terminal of your choice to ssh in.</p>
-<p>Here is a list of suggested commands to get yourselves in! Disclaimer: This is part of the setup process, and it is not in our interest to make you suffer or read documentations for this portion of key generation.</p>
-<pre><code>sudo ssh-keygen -t rsa -f ~/.ssh/Ultima -C Ultima -b 2048
-</code></pre>
-<p>The password is sutd1234</p>
-<pre><code>cat ~/.ssh/Ultima.pub  
-</code></pre>
-<p>send your public key only! else we can hack hack :D</p>
-<pre><code>sudo ssh -i ~/.ssh/Ultima Ultima@&lt;ip address&gt;
-</code></pre>
-<p><em><strong>For Windows</strong></em>, Utilize PuTTYgen to generate a public key and private key associated with the Ultima account, send the public key to one of the Challenge Masters to gain access to the SSH.</p>
-<p><strong>It is very important to use Ultima as the account</strong></p>
-<p>Important: please pass us your public key only! It should be in the following format:</p>
-<p>COPY AND PASTE THIS ENTIRELY and send it to one of us via pm</p>
-<pre><code>ssh-rsa &lt;whatever the key is here&gt; Ultima
-</code></pre>
-<br>
-<h2>Small Guide</h2>
-<p>To make the challenge friendly to solve, we will let you know what you need to use to solve. Just follow our guide carefully to be able to solve our challenge.</p>
-<p>To start you off, a <strong>very big hint</strong> would be to use what you have learnt from the labs as well as Computer Systems Engineering module in the previous term to be able to solve our challenges. If you understand the labs or what was taught in class, you should be able to solve the challenges.</p>
-<h2>Background</h2>
-<p>We have a very lazy system administrator lying around and the system has files lurking everywhere such that military secrets of the navy can be compromised. Of course certain data that should not be read can be read. A food for thought would be that under the BLP model, what security rules are violated and and what level can non-super users read and write the data accordingly. A user Ultima holds the access to the personal account code and which can lead to the access of the admin account. Getting into the admin means that access to the navy can be leaked within 2 hours.</p>
-<p>IMPORTANT: We are all counting on you to prevent the leak of secrets.</p>
-<h2>Starting off</h2>
-<ol>
-<li>SSH into the system with the following <a href="">details attached</a> for each group, we have setup the respective ip address please stick to your own ip addresses else it'll be unfair to everyone.</li>
-</ol>
-<p>If you know the password to the admin account, the username is admin and the password is for you to guess or do it via personal account which has the username Ultima in this case.</p>
-<h2>Personal Account: Ultima</h2>
-<h3>Challenge 1</h3>
-<p>Hint: Find an image to decrypt the underlying password for an email, send in your best guesser and hope for the best</p>
-<p>Hint: The keyspace is only the alphabet, space, and period, the target string is in lower-case</p>
-<h3>Challenge 2</h3>
-<p>Hint: Find the password for the admin in an encrypted email Note that the email has salt. Think of some tools to crack!
-<br></p>
-<h2>Admin</h2>
-<h3>Challenge 3</h3>
-<p>Hint: Run the <code>challenge.sh</code> script, but its self-destructible, you can find ways to stop it... The password is possibly a permutation of the administrative password</p>
-<h3>Challenge 4</h3>
-<p>No hints given, since extra hints are hidden in the account.</p>
-<h2>Things that you might need to think of</h2>
-<ul>
-<li>RSA</li>
-<li>Common Image Analysis techniques.</li>
-<li>Linux file system. You can scroll around to find what you need to use to piece together for each challenge. Solving each challenge will enable you to solve the other challenges.</li>
-<li>Crypto techniques. Don't worry they are pretty weak such that we have not enabled so many paddings.</li>
-<li>Passwords that you may need are of the common passwords that can be cracked.</li>
-<li>Command Line Tools</li>
-</ul>
-</body>
+    <p>Welcome to Anythink 5.0 Challenge. We are grateful that you are attempting our challenge. <br> Note: For any help that you need, you can pm either one of us below via telegram. <br>
+    </p>
+    <p>Note: Each of us are tagged to an operating system <br>
+    </p>
+    <p>MacOS/Linux: <br>
+      <a href="https://t.me/Yuanhawk">Li Yuan</a>
+      <a href="https://t.me/caramel_melmel">Melody</a>
+    </p>
+    <p>Windows: <br>
+      <a href="https://t.me/houjuunueheianalien">Leon</a>
+      <a href="https://t.me/sean_gunawan">Sean Gunawan</a>
+    </p>
+    <h2>Prerequisites</h2>
+    <p>To complete this lab, you would need to do the following on your system to be able to complete the challenge.</p>
+    <ol>
+      <li>generate a pair of rsa private and public keys 2048 bits will be the correct size.</li>
+      <li>You would also need python3 minimum python 3.8 to solve our challenge.</li>
+      <li>For windows users, please ensure that Putty is working (recommended to ssh easily). Note: Ports 22, 3389 are open, make use of them wisely.</li>
+    </ol>
+    <h2>Key generation</h2>
+    <p>
+      <em>
+        <strong>For POSIX compliant systems</strong>
+      </em>, you can use a terminal of your choice to ssh in.
+    </p>
+    <p>Here is a list of suggested commands to get yourselves in! Disclaimer: This is part of the setup process, and it is not in our interest to make you suffer or read documentations for this portion of key generation.</p>
+    <pre>
+								<code>sudo ssh-keygen -t rsa -f ~/.ssh/Ultima -C Ultima -b 2048
+</code>
+							</pre>
+    <p>The password is sutd1234</p>
+    <pre>
+								<code>cat ~/.ssh/Ultima.pub  
+</code>
+							</pre>
+    <p>send your public key only! else we can hack hack :D</p>
+    <pre>
+								<code>sudo ssh -i ~/.ssh/Ultima Ultima@&lt;ip address&gt;
+</code>
+							</pre>
+    <p>
+      <em>
+        <strong>For Windows</strong>
+      </em>, Utilize PuTTYgen to generate a public key and private key associated with the Ultima account, send the public key to one of the Challenge Masters to gain access to the SSH.
+    </p>
+    <p>
+      <strong>It is very important to use Ultima as the account</strong>
+    </p>
+    <p>Important: please pass us your public key only! It should be in the following format:</p>
+    <p>COPY AND PASTE THIS ENTIRELY and send it to one of us via pm</p>
+    <pre>
+								<code>ssh-rsa &lt;whatever the key is here&gt; Ultima
+</code>
+							</pre>
+    <br>
+    <h2>Small Guide</h2>
+    <p>To make the challenge friendly to solve, we will let you know what you need to use to solve. Just follow our guide carefully to be able to solve our challenge.</p>
+    <p>To start you off, a <strong>very big hint</strong> would be to use what you have learnt from the labs as well as Computer Systems Engineering module in the previous term to be able to solve our challenges. If you understand the labs or what was taught in class, you should be able to solve the challenges. </p>
+    <h2>Background</h2>
+    <p>We have a very lazy system administrator lying around and the system has files lurking everywhere such that military secrets of the navy can be compromised. Of course certain data that should not be read can be read. A food for thought would be that under the BLP model, what security rules are violated and and what level can non-super users read and write the data accordingly. A user Ultima holds the access to the personal account code and which can lead to the access of the admin account. Getting into the admin means that access to the navy can be leaked within 2 hours.</p>
+    <p>IMPORTANT: We are all counting on you to prevent the leak of secrets.</p>
+    <h2>Starting off</h2>
+    <ol>
+      <li>SSH into the system with the following <a href="">details attached</a> for each group, we have setup the respective ip address please stick to your own ip addresses else it'll be unfair to everyone. </li>
+    </ol>
+    <p>If you know the password to the admin account, the username is admin and the password is for you to guess or do it via personal account which has the username Ultima in this case.</p>
+    <h2>Personal Account: Ultima</h2>
+    <h3>Challenge 1</h3>
+    <p>Hint: Find an image to decrypt the underlying password for an email, send in your best guesser and hope for the best</p>
+    <p>Hint: The keyspace is only the alphabet, space, and period, the target string is in lower-case</p>
+    <h3>Challenge 2</h3>
+    <p>Hint: Find the password for the admin in an encrypted email Note that the email has salt. Think of some tools to crack! <br>
+    </p>
+    <h2>Admin</h2>
+    <h3>Challenge 3</h3>
+    <p>Hint: Run the <code>challenge.sh</code> script, but its self-destructible, you can find ways to stop it... The password is possibly a permutation of the administrative password </p>
+    <h3>Challenge 4</h3>
+    <p>No hints given, since extra hints are hidden in the account.</p>
+    <h2>Things that you might need to think of</h2>
+    <ul>
+      <li>RSA</li>
+      <li>Common Image Analysis techniques.</li>
+      <li>Linux file system. You can scroll around to find what you need to use to piece together for each challenge. Solving each challenge will enable you to solve the other challenges.</li>
+      <li>Crypto techniques. Don't worry they are pretty weak such that we have not enabled so many paddings.</li>
+      <li>Passwords that you may need are of the common passwords that can be cracked.</li>
+      <li>Command Line Tools</li>
+    </ul>
+  </body>
+  <body></body>
 </html>
